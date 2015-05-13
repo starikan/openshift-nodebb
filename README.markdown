@@ -79,12 +79,23 @@ git remote add openshift -m master https://github.com/ahwayakchih/openshift-node
 git pull --no-edit -s recursive -X theirs openshift master
 ```
 
+### 6.1 If no orign in Git config
+
+'''[remote "origin"]
+	url = ssh://<id>@<url>.rhcloud.com/~/git/nodebb.git
+'''
+This Url get from application page
+
 ### 7. Push everything to application repository
 
 This will push source code to OpenShift servers, deploy and start application.
 
 ```sh
 git push origin master
+
+or 
+
+git push origin master --force
 ```
 
 ### 8. That's it!
